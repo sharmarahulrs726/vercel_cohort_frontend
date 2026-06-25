@@ -12,7 +12,7 @@ import type {
 
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://rahulsharma713096-hf-cohort.hf.space',
+  baseURL: import.meta.env.VITE_API_URL || 'https://rahulsharma713096-hf-cohort.hf.space/api',
   timeout: 300000,
 });
 
