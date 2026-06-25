@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build --prefix frontend",
-  "outputDirectory": "frontend/dist",
+  "rootDirectory": "frontend",
   "rewrites": [
     {
       "source": "/(.*)",
