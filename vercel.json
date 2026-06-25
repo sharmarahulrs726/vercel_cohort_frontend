@@ -1,7 +1,7 @@
 {
   "version": 2,
+  "framework": null,
   "outputDirectory": "frontend/dist",
-  "buildCommand": "cd frontend && npm install && npm run build",
   "rewrites": [
     {
       "source": "/(.*)",
