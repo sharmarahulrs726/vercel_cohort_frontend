@@ -145,7 +145,7 @@ export const NoticeViewer: React.FC<NoticeViewerProps> = ({ sessionId, onNewCase
                 Open in Word to review and edit before finalizing.
               </p>
               <a
-                href={`/api/files/${sessionId}/Notice.docx`}
+                href={apiService.getFileUrl(sessionId, 'Notice.docx')}
                 download
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow font-semibold"
               >
@@ -162,7 +162,7 @@ export const NoticeViewer: React.FC<NoticeViewerProps> = ({ sessionId, onNewCase
             <div>
               <div className="flex justify-end items-center mb-2">
                 <a
-                  href={`/api/files/${sessionId}/Notice.pdf`}
+                  href={apiService.getFileUrl(sessionId, 'Notice.pdf')}
                   download
                   className="text-sm text-blue-600 hover:underline"
                 >
@@ -171,7 +171,7 @@ export const NoticeViewer: React.FC<NoticeViewerProps> = ({ sessionId, onNewCase
               </div>
               <div className="h-[700px] border rounded-lg overflow-hidden bg-gray-100">
                 <object
-                  data={`/api/files/${sessionId}/Notice.pdf`}
+                  data={apiService.getFileUrl(sessionId, 'Notice.pdf')}
                   type="application/pdf"
                   className="w-full h-full"
                   onError={() => setPdfError(true)}
@@ -183,7 +183,7 @@ export const NoticeViewer: React.FC<NoticeViewerProps> = ({ sessionId, onNewCase
                       </svg>
                       <p className="text-gray-500 mb-4">PDF preview not available in your browser.</p>
                       <a
-                        href={`/api/files/${sessionId}/Notice.pdf`}
+                        href={apiService.getFileUrl(sessionId, 'Notice.pdf')}
                         download
                         className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                       >
@@ -206,7 +206,7 @@ export const NoticeViewer: React.FC<NoticeViewerProps> = ({ sessionId, onNewCase
                 Your browser cannot display this PDF inline. Download it instead.
               </p>
               <a
-                href={`/api/files/${sessionId}/Notice.pdf`}
+                href={apiService.getFileUrl(sessionId, 'Notice.pdf')}
                 download
                 className="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 shadow font-semibold"
               >
@@ -284,7 +284,7 @@ export const NoticeViewer: React.FC<NoticeViewerProps> = ({ sessionId, onNewCase
         <div className="flex justify-center gap-4 mt-6 flex-wrap">
           {hasDocx && (
             <a
-              href={`/api/files/${sessionId}/Notice.docx`}
+              href={apiService.getFileUrl(sessionId, 'Notice.docx')}
               download
               className="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow font-semibold"
             >
@@ -296,7 +296,7 @@ export const NoticeViewer: React.FC<NoticeViewerProps> = ({ sessionId, onNewCase
           )}
           {hasPdf && (
             <a
-              href={`/api/files/${sessionId}/Notice.pdf`}
+              href={apiService.getFileUrl(sessionId, 'Notice.pdf')}
               download
               className="flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 shadow font-semibold"
             >
